@@ -1,0 +1,172 @@
+
+body {
+    margin: 0;
+}
+
+.container {
+    font-family: 'Lucida';
+    font-weight: thin;
+    font-size: 20px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    padding: 10px;
+    box-sizing: border-box;
+}
+.no_bullets {
+    list-style-type: none;
+}  
+
+.spaced-list li{
+    margin-bottom: 10px;
+}
+
+.container div{
+    padding: 10px;
+    max-width: 100%;
+    resize: text;
+    overflow: auto;
+}
+
+.quote {
+    font-family: 'Andale Mono';
+    font-weight: 50;
+    font-size: 17px;
+}
+
+
+.num_1 {
+    overflow: auto;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-content: space-between;
+}
+.num_1, .num_4, .num_5, .num_6 {
+    height: 180px; 
+}
+
+.image {
+    width: 300px;
+    height: 400px;
+}
+.alignright {
+    text-align: right;
+}
+
+.alignleft {
+	text-align: left;
+}
+
+.central {
+    display: flex;
+    align-items: center;  
+}
+
+.num_2 {
+    grid-row-start: 2;
+    grid-row-end: 5;
+    text-align: right;
+}
+.num_3 {
+    height: 360px;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+}
+
+.num_4 {
+    padding: 0px;
+    overflow: auto;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.picture{
+    flex-direction: column; 
+}
+
+.num_6 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    justify-content: space-between;
+}
+
+.num_6 h2 {
+    margin: 0; 
+    text-align: left;
+}
+
+.blue {
+    background-color: #DAE3FF;
+}
+.green {
+    background-color: #DAFFE1;
+}
+.red {
+    background-color: #FFE4DC;
+}
+
+.user-input-form {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
+}
+.scrollable-list {
+    align-self: flex-start;
+    margin: 0px;
+    margin-left: 10px;
+}
+.scrollable-list .num_3{
+    text-align: left;
+}
+
+
+@media screen and (max-width: 700px){
+    .container {
+        align-self: flex-start;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        height: auto;
+        overflow-y: auto;
+    }
+    
+    .container div
+    {
+        align-self: flex-start;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    .num_1 {
+        display: block;  
+        min-height: 120px;
+        overflow: visible;
+    }
+
+    .num_2, .num_3, .num_4, .num_5, .num_6 {
+        min-height: 120px;
+        overflow: visible;
+        display: block; 
+        grid-column-start: 1; 
+        grid-column-end: 2;
+
+    }
+    .num_2 {
+        grid-row: 3;
+    }
+    .num_3 {
+        grid-row: 2;
+    }
+    .num_4 {
+        grid-row: 5;
+    }
+}
